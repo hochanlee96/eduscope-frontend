@@ -62,7 +62,7 @@ function App() {
     const dataUrl = canvas.toDataURL("image/jpeg");
 
     try {
-      const res = await fetch("http://localhost:4000/api/frame", {
+      const res = await fetch("/api/frame", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image: dataUrl }),
